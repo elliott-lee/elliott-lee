@@ -5,7 +5,7 @@
   <title>Grist Material Table Widget</title>
   <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
   <style>
-    /* Use Roboto as the primary font, similar to Material UI */
+    /* Use Roboto font (common in Material UI) */
     body {
       font-family: "Roboto", sans-serif;
       margin: 0;
@@ -38,6 +38,16 @@
     .material-table tr:hover {
       background-color: #eeeeee;
     }
+    /* Details panel for the selected record */
+    #details {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
     /* Error message styling */
     #error {
       color: red;
@@ -60,6 +70,7 @@
     </table>
   </div>
   <div id="error"></div>
+  <div id="details">Select a row to view details...</div>
   <script src="script.js"></script>
 </body>
 </html>
