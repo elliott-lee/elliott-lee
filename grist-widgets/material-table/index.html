@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Grist Material Table Widget</title>
+  <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
+  <style>
+    /* Use Roboto as the primary font, similar to Material UI */
+    body {
+      font-family: "Roboto", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: var(--grist-theme-page-bg, #fafafa);
+      color: var(--grist-theme-text, #333);
+    }
+    .container {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    /* Material UI–style table */
+    .material-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .material-table th,
+    .material-table td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .material-table th {
+      background-color: #f5f5f5;
+      font-weight: 500;
+      color: #616161;
+    }
+    .material-table tr:hover {
+      background-color: #eeeeee;
+    }
+    /* Error message styling */
+    #error {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table id="data-table" class="material-table">
+      <thead>
+        <tr id="table-header">
+          <!-- Header cells will be inserted here -->
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Data rows will be inserted here -->
+      </tbody>
+    </table>
+  </div>
+  <div id="error"></div>
+  <script src="script.js"></script>
+</body>
+</html>
